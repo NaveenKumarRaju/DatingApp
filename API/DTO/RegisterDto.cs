@@ -12,6 +12,7 @@ namespace API.DTO
         [StringLength(15, ErrorMessage = "Username should be only 15 characters")]
         public string UserName { get; set;}
         [Required]
+        [StringLength(8, MinimumLength = 4)]
         public string Password { get; set;}
     }
 }
