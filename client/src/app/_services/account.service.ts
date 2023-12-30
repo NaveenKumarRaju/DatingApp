@@ -4,6 +4,7 @@ import { map } from 'rxjs/operators';
 import { User } from '../_models/user';
 import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
 import { environment } from 'src/environments/environment';
+import { MembersService } from './members.service';
 
 @Injectable({
   providedIn: 'root'

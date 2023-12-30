@@ -5,6 +5,7 @@ import { User } from '../_models/user';
 import { of } from 'rxjs';
 import { Route, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { MembersService } from '../_services/members.service';
 
 @Component({
   selector: 'app-nav',
@@ -12,7 +13,7 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit{
-  model: any = {}
+  model: any = {};
 
   constructor(public accountService: AccountService, private router: Router,
                 private toastr: ToastrService) {}
@@ -22,7 +23,7 @@ export class NavComponent implements OnInit{
 
   login() {
     this.accountService.login(this.model).subscribe({
-      next: _ =>  this.router.navigateByUrl('/members')
+      next: _ => this.router.navigateByUrl('/members') 
     })
   }
 
