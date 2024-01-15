@@ -7,7 +7,7 @@ using API.Errors;
 
 namespace API.Middlewares
 {
-    public class ExceptionMiddleware
+    public class ExceptionMiddleware 
     {
         private readonly RequestDelegate _next;
         private readonly ILogger<ExceptionMiddleware> _logger;
@@ -42,6 +42,8 @@ namespace API.Middlewares
 
                 await context.Response.WriteAsync(json);
             }
-        }
+        }        
     }
+
+
 }

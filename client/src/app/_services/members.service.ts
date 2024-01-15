@@ -24,6 +24,7 @@ export class MembersService {
       next: user => {
           if(user){
             this.userParams = new UserParams(user);
+            console.log(this.userParams);
             this.user = user;
           }          
       }
